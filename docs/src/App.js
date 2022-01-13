@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 function App() {
-	const e = eval;
 	const [calc, setCalc] = useState("");
 	const [result, setResult] = useState("");
 
@@ -16,6 +15,7 @@ function App() {
 		setCalc(calc + value);
 
 		if (!ops.includes(value)) {
+			const e = eval;
 			setResult(e(calc + value).toString())
 		}
 	};
@@ -36,7 +36,10 @@ function App() {
 		return digits;
 	}
 
-	const calculate = () => setCalc(e(calc).toString());
+	const calculate = () => {
+		const e = eval;
+		setCalc(e(calc).toString());
+	}
 
 	const deleteLast = () => {
 		if (calc === '') {
