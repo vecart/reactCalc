@@ -1,8 +1,9 @@
 :root {
-    --primary: #d81e5b;
-    --seconday: #8c38ff;
+    --primary: rgb(128, 235, 217);
+    --seconday: #e880f1;
     --dark: #131a26;
     --light: #eee;
+    --background: rgba(169, 221, 212, 0.973);
 }
 
 * {
@@ -13,7 +14,7 @@
 }
 
 body {
-    background-color: var(--light);
+    background-color: var(--background);
 }
 
 .App {
@@ -30,7 +31,7 @@ body {
     background-color: #fff;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0px 2px 64px rgba(0,0,0,0.2);
+    box-shadow: 10px 10px 64px rgba(0,0,0,0.2);
 }
 
 .display {
@@ -74,10 +75,11 @@ button:hover {
     flex: 1 1 0%;
     background-color: var(--primary);
     font-weight: 700;
+    color:var(--dark)
 }
 
 .operators button:hover {
-    color: var(--dark);
+    color: var(--seconday);
     border-color: var(--dark);
 }
 
